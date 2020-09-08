@@ -18,61 +18,61 @@ namespace math_lib
 
 		// trig
 		
-		inline static float cos(float t)
+		const inline static float cos(const float t)
 		{
 			return std::cosf(t);
 		}
 
-		inline static float sin(float t)
+		const inline static float sin(const float t)
 		{
 			return std::sinf(t);
 		}
 
-		inline float tan(float t)
+		const inline static float tan(const float t)
 		{
 			return std::tanf(t);
 		}
 
 		// combined trig
 
-		inline void cossin(float& c, float &s, float t)
+		inline static void cossin(float& c, float &s, const float t)
 		{
-			c = cosf(t);
-			s = sinf(t);
+			c = std::cosf(t);
+			s = std::sinf(t);
 		}
 
 		// arc trig
 
-		inline float acos(float t)
+		const inline static float acos(const float t)
 		{
 			return std::acosf(t);
 		}
 
-		inline float asin(float t)
+		const inline static float asin(const float t)
 		{
 			return std::asinf(t);
 		}
 
-		inline float atan(float t)
+		const inline static float atan(const float t)
 		{
 			return std::atanf(t);
 		}
 
-		inline float atan2(float t)
+		const inline static float atan2(const float t)
 		{
 			return std::atanf(t);
 		}
 
 		// square root
 
-		inline float sqrt(float x)
+		const inline static float sqrt(const float x)
 		{
 			return std::sqrtf(x);
 		}
 
-		inline float rsqrt(float x)
+		const inline static float rsqrt(const float x)
 		{
-			return 1.0f / sqrt(x);
+			return 1.0f / std::sqrtf(x);
 		}
 
 	};
