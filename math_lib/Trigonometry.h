@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef MATH_LIBRARY_H
-#define MATH_LIBRARY_H
+#ifndef TRIGONOMETRY_H
+#define TRIGONOMETRY_H
 
 #include <cmath>
 
