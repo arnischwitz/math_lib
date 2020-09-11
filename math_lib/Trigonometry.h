@@ -3,7 +3,7 @@
 #ifndef TRIGONOMETRY_H
 #define TRIGONOMETRY_H
 
-#include <cmath>
+#include <math.h>
 
 namespace math_lib
 {
@@ -58,9 +58,9 @@ namespace math_lib
 			return std::atanf(t);
 		}
 
-		const inline static float atan2(const float t)
+		const inline static float atan2(const float y, const float x)
 		{
-			return std::atanf(t);
+			return std::atan2f(y, x);
 		}
 
 		// square root

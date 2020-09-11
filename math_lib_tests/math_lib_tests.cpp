@@ -10,49 +10,81 @@ using namespace math_lib;
 
 namespace mathlibtests
 {
-	TEST_CLASS(vector)
+	TEST_CLASS(vector_test_class)
 	{
 	public:
 
-		TEST_METHOD(test)
+		TEST_METHOD(_test_method)
 		{
 			
 		}
 	};
 
-	TEST_CLASS(matrix)
+	TEST_CLASS(matrix_test_class)
 	{
 	public:
 
-		TEST_METHOD(test)
+		TEST_METHOD(_test_method)
 		{
 
 		}
 	};
 
-	TEST_CLASS(other)
+	TEST_CLASS(trig_test_class)
 	{
 	public:
 		
-		TEST_METHOD(TrigTests)
+		TEST_METHOD(cosine_test_method)
 		{
 			Assert::IsTrue(Logic::IsEqual(Trigonometry::cos(1.0f), 0.540302f, TOLERANCE));
+		}
+
+		TEST_METHOD(sine_test_method)
+		{
 			Assert::IsTrue(Logic::IsEqual(Trigonometry::sin(1.0f), 0.841470f, TOLERANCE));
-			/*Assert::IsTrue(Trigonometry::sin(1.0f) == 0.841470f);
-			Assert::AreEqual(Trigonometry::tan(45.0f), 0.707f);
+		}
 
-			float x, y = 0.0f;
-			Trigonometry::cossin(x, y, 13.0f);
-			Assert::AreEqual(x, 0.0f);
-			Assert::AreEqual(y, 0.0f);
+		TEST_METHOD(tan_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::tan(1.0f), 1.557407f, TOLERANCE));
+		}
 
-			Assert::AreEqual(Trigonometry::acos(13.0f), 0.0f);
-			Assert::AreEqual(Trigonometry::asin(13.0f), 0.0f);
-			Assert::AreEqual(Trigonometry::atan(13.0f), 0.0f);
-			Assert::AreEqual(Trigonometry::atan2(13.0f), 0.0f);
+		TEST_METHOD(cosine_sine_test_method)
+		{
+			float x, y = 0.000000f;
+			Trigonometry::cossin(x, y, 1.000000f);
+			Assert::IsTrue(Logic::IsEqual(x, 0.540302f, TOLERANCE));
+			Assert::IsTrue(Logic::IsEqual(y, 0.841470f, TOLERANCE));
+		}
+		
+		TEST_METHOD(acosine_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::acos(1.000000f), 0.000000f, TOLERANCE));
+		}
 
-			Assert::AreEqual(Trigonometry::sqrt(13.0f), 0.0f);
-			Assert::AreEqual(Trigonometry::rsqrt(13.0f), 0.0f);*/
+		TEST_METHOD(asine_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::asin(1.000000f), 1.570796f, TOLERANCE));
+		}
+
+		TEST_METHOD(atan_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::atan(1.000000f), 0.785398f, TOLERANCE));
+		}
+
+		TEST_METHOD(atan2_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::atan2(0.000000f, 0.000000f), 0.000000f, TOLERANCE));
+		}
+
+		TEST_METHOD(sqrt_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::sqrt(4.000000f), 2.000000f, TOLERANCE));
+		}
+
+		TEST_METHOD(rsqrt_test_method)
+		{
+			Assert::IsTrue(Logic::IsEqual(Trigonometry::rsqrt(1.000000f), 1.000000f, TOLERANCE));
 		}
 	};
 }
